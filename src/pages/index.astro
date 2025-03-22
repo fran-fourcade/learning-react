@@ -7,6 +7,7 @@ import MarkupWithJSX from "@components/MarkupWithJSX";
 import Props from "@components/Props";
 import RenderingLists from "@components/RenderingLists";
 import PureComponents from "@components/PureComponents";
+import UiAsATree from "@components/UiAsATree";
 ---
 
 <html lang="en">
@@ -26,7 +27,7 @@ import PureComponents from "@components/PureComponents";
 		</style>
 	</head>
 	<body>
-		<main>
+		<>
       <FirstComponent/>
       <hr>
 		  <ImportExport/>
@@ -42,6 +43,8 @@ import PureComponents from "@components/PureComponents";
       <RenderingLists/>
       <hr>
       <PureComponents/>
+      <hr>
+      <UiAsATree/>
      </main>
 	</body>
 </html>
