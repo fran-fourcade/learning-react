@@ -1,4 +1,4 @@
-import { CodeSnippet } from "./Props";
+import Codify from "./Codify";
 
 export default function Events () {
   return (
@@ -12,10 +12,10 @@ export default function Events () {
           <li>Have names that start with <code>handle</code>, followed by the name of the event.</li>
         </ul>
         Alternatively, we can define an event handler inline in the JSX, even using an arrow function (convenient for short functions):
-        <CodeSnippet code={`<button onClick={ () => {
+        <Codify code={`<button onClick={ () => {
   alert('You clicked me!');
 } />
-`}></CodeSnippet>
+`}/>
       </p>
       <strong>Reading props in event handlers: </strong>
       <br />

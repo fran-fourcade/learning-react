@@ -1,18 +1,4 @@
-import { CodeBlock, nord } from "react-code-blocks";
-
-
-export function CodeSnippet({ code = '' }) {
-  return (
-    <div style={{ padding: '20px' }}>
-      <CodeBlock
-        text={code}
-        language={"jsx"}
-        theme={nord}
-        showLineNumbers={true}
-      />
-    </div>
-  );
-}
+import Codify from './Codify';
 
 export default function Props() {
   return (
@@ -45,14 +31,14 @@ export default function Props() {
 
       <strong>Without Destructuring: </strong> 
       <br />
-      <CodeSnippet code={`function Car(props) {
+      <Codify code={`function Car(props) {
   return <p>I'm a car of the brand {props.brand}</p>;
 }
 `}/>
       <br />
       <strong>Destructuring: </strong> 
       <br />
-      <CodeSnippet code={`function Car({ brand }) {
+      <Codify code={`function Car({ brand }) {
   return <p>I'm a car of the brand {brand}</p>;
 }
 `}/>
