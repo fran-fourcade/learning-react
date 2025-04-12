@@ -1,7 +1,7 @@
 export default function MarkupWithJSX() {
   return (
     <>
-      <h3>Writing Markup with JSX</h3>
+      <h2>Writing Markup with JSX</h2>
       <span>JSX is a separate thing from React. It is a syntax extension that looks a lot like HTML, but it is a bit stricter and can display dynamic information.</span>
       <strong><p>The Rules of JSX</p></strong>
       <ul>

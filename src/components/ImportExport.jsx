@@ -1,9 +1,9 @@
 export  function ImportExport() {
   return (
     <>
-      <h4>Importing and exporting components</h4>
+      <h3>Importing and exporting components</h3>
       <span>We can define as many components as we want inside a single file, but creating different files for different components will make them more modular and reusable in other files</span>
-      <h4>Export/Import Syntax Reference</h4>
+      <h3>Export/Import Syntax Reference</h3>
       <ExportImportTable />
     </>
   )

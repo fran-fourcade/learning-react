@@ -3,7 +3,7 @@ import Codify from './Codify';
 export default function Props() {
   return (
     <>
-      <h3>Props</h3>
+      <h2>Props</h2>
       <span>React components use props to communicate with each other. Every parent component can pass some information to its child components by giving them props. Props might remind us of HTML attributes, but we can pass any JavaScript value through them, including objects, arrays, and functions.</span>
       <span>They're parameters that we pass to a component. </span>
       

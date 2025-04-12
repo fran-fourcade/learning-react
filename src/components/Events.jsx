@@ -3,7 +3,7 @@ import Codify from "./Codify";
 export default function Events () {
   return (
     <>
-      <h3>Responding to Events</h3>
+      <h2>Responding to Events</h2>
       <p>In React we can add <i>event handlers</i> to our JSX. Event handlers are our own functions that will be triggered in response to interactions like clicking, hovering, focusing form inputs, and so on.</p>
       <p>To add an event handler, we first need to define a function and then pass it as a prop to the appropriate JSX tag. </p>
       <p>Event handler functions:

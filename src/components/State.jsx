@@ -3,7 +3,7 @@ import Codify from "./Codify";
 export default function State() {
   return (
     <>
-      <h3>State</h3>
+      <h2>State</h2>
       <subtitle>Components often need to change what’s on the screen as a result of an interaction. Typing into the form should update the input field, clicking “next” on an image carousel should change which image is displayed, clicking “buy” should put a product in the shopping cart. Components need to “remember” things: the current input value, the current image, the shopping cart. In React, this kind of component-specific memory is called <b>state</b>.</subtitle>
       <p><b>Why State and not work with local variables?</b></p>
       <p>When an event handler updates a local variable, two things prevent that change from being visible:</p>
@@ -42,7 +42,7 @@ export default function State() {
     <p><b>Note: </b> <code>useState</code>, as well as any other function starting with "use", is a Hook. Hooks are special functions that are only available while React is <b>rendering</b>. They let us “hook into” different React features. </p>
     <p><b>IMPORTANT: </b> Hooks can only be called at the top level of our components or our own hooks. We can't call hooks inside conditions, loops, or other nested functions. It is like we 'use' React features at the top of our components similiar to how we 'import' modules at the top of a file.</p>
 
-    <h4>Anatomy of useState</h4>
+    <h3>Anatomy of useState</h3>
     <span>When we call <code>useState</code>, we are telling React that we want this component to remember something:</span>
 
     <Codify code={`const [index, setIndex] = useState(0);`}/>

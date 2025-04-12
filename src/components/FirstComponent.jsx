@@ -1,7 +1,7 @@
 export default function FirstComponent() {
   return (
     <>
-      <h3>A react component is a javascript function that returns markup (JSX)</h3>
+      <h2>A react component is a javascript function that returns markup (JSX)</h2>
       <Nested/>
       <Summary/>
     </>
@@ -11,7 +11,7 @@ export default function FirstComponent() {
 function Nested() {
   return (
     <div>
-      <h4>Components can be nested, but we should never define a component inside other component</h4>
+      <h3>Components can be nested, but we should never define a component inside other component</h3>
     </div>
   )
 }

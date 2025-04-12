@@ -1,7 +1,7 @@
 export default function UiAsATree() {
   return (
     <>
-      <h3>Understanding the UI as a Tree</h3>
+      <h2>Understanding the UI as a Tree</h2>
       <ul>
         <li>Trees are a common way to represent the relationship between entities. They are often used to model UI.</li>
         <li>Render trees represent the nested relationship between React components across a single render.</li>

@@ -1,7 +1,7 @@
 export default function PureComponents () {
   return (
     <>
-      <h3>Keeping components pure</h3>
+      <h2>Keeping components pure</h2>
       <article>
         <p>A pure function is a function with the following characteristics:</p>
           <ul>

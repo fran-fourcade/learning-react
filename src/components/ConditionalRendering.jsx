@@ -1,7 +1,7 @@
 export default function ConditionalRendering() {
   return (
     <>
-      <h3>Conditional rendering</h3>
+      <h2>Conditional rendering</h2>
       <span>
         Components often need to display different things depending on different
         conditions. In React, we can conditionally render JSX using JavaScript
