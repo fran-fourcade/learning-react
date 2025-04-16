@@ -10,8 +10,8 @@ export default function QueueStateUpdates() {
       <p>React waits until all code in the event handlers has run before processing our state updates. This lets us update multiple state variables—even from multiple components—without triggering too many re-renders. But this also means that the UI won’t be updated until after our event handler, and any code in it, completes. This behavior is known as <b>batching</b>, and it makes our React app run much faster. It also avoids dealing with confusing “half-finished” renders where only some of the variables have been updated.</p>
       <p><b><i>Important:</i></b> <i>React does not batch across multiple intentional events like clicks—each click is handled separately. React's official documentation states: "Rest assured that React only does batching when it’s generally safe to do. This ensures that, for example, if the first button click disables a form, the second click would not submit it again."</i></p>
       <h3>Updating the same state multiple times before the next render (The trick)</h3>
-      <p>It is an uncommon use case, but if we would like to update the same state variable multiple times before the next render, instead of passing the next state value like <code>setNumber(number + 1)</code>, <b>we can pass a function that calculates the next state based on the previous one in the queue</b>, like <code>setNumber(n => n + 1)</code>. It is a way to tell React to "do something with the state value" instead of just replacing it.</p>
-      <p>Here, <code>n => n + 1</code> is called an <b>updater function</b>. When we pass it to a state setter:</p>
+      <p>It is an uncommon use case, but if we would like to update the same state variable multiple times before the next render, instead of passing the next state value like <code>setNumber(number + 1)</code>, <b>we can pass a function that calculates the next state based on the previous one in the queue</b>, like <code>setNumber(n ={">"} n + 1)</code>. It is a way to tell React to "do something with the state value" instead of just replacing it.</p>
+      <p>Here, <code>n ={">"} n + 1</code> is called an <b>updater function</b>. When we pass it to a state setter:</p>
       <ul>
         <li>React queues this function to be processed after all the other code in the event handler has run.</li>
         <li>During the next render, React goes through the queue and gives us the final updated state.</li>
@@ -23,7 +23,13 @@ export default function QueueStateUpdates() {
       <Codify code={`setEnabled(e => !e)
 setLastName(ln => ln.reverse())
 setFriendCount(fc => fc * 2)`}/>
-      <p>If we prefer more verbose code, another common convention is to repeat the full state variable name, like <code>setEnabled(enabled => !enabled)</code>, or to use a prefix like <code>setEnabled(prevEnabled => !prevEnabled)</code>.</p>
+      <p>If we prefer more verbose code, another common convention is to repeat the full state variable name, like <code>setEnabled(enabled ={">"} !enabled)</code>, or to use a prefix like <code>setEnabled(prevEnabled ={">"} !prevEnabled)</code>.</p>
+      <h3>Recap</h3>
+      <ul>
+        <li>Setting state does not change the variable in the existing render, but it requests a new render.</li>
+        <li>React processes state updates after event handlers have finished running. This is called batching.</li>
+        <li>To update some state multiple times in one event, we can use <code>setNumber(n ={">"} n + 1)</code> updater function.</li>
+      </ul>
     </>
   );
 }
